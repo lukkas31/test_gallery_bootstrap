@@ -1,0 +1,157 @@
+
+body{
+	font-size: 100%;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+}
+
+//background container and image
+.background{
+	position: absolute;
+	width: 100%;
+	height: 300px;
+
+	.background__container{
+		position: relative;
+		max-width: 1300px;
+		height: 100%;
+		overflow: hidden;
+		margin:auto;
+		
+		.background__image{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../img/pexels-photo-261187.jpeg) no-repeat center center;
+			filter: blur(8px) brightness(75%);
+			transform: scale(1.1);
+		}
+	}
+
+}
+
+//gallery container
+.container{
+
+	.main_header{
+		padding-top: 10%;
+	}
+	
+	.main_header__title{
+		position: relative;
+		height: 50px;
+		vertical-align: baseline;
+		color: #f6f6f6;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		margin-left: 1%;
+	}
+	.container__title{
+		position: relative;
+		height: 30px;
+		vertical-align: baseline;
+		font-size: 0.9em;
+		font-weight: 400;
+		color: #f6f6f6;
+		text-transform: uppercase;
+		border-bottom: 1px solid #f9f9f9;
+	}
+
+	
+
+	//gallery boxs
+	.box{
+		position: relative;
+		height: 200px;
+		box-shadow: 3px 3px 10px rgba($color: #555, $alpha: 0.3);
+		border-radius: 5px;
+		margin-bottom: 7%;
+		
+		a:hover .box__title{
+			height: 35%;
+			
+			p{
+				opacity: 1;
+			}
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+
+		.box__title{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 25%;
+			background-color: #f9f9f9;
+			border-radius: 0 0 5px 5px;
+			vertical-align: middle;
+			transition: .5s;
+			transition-timing-function: ease-out;
+
+			p{
+				opacity: 0;
+				text-align: center;
+				color: #bababa;
+				font-size: .8em;
+				margin: 0;
+				transition-delay: .2s;
+				transition: .2s;
+				transition-timing-function: ease-out;
+			}
+
+			h6{
+				text-align: center;
+				color: #555;
+				text-transform: uppercase;
+				margin: 7% 0 0 0;
+				font-size: .9em;
+			}
+		}
+	}
+
+	//add new item box
+	.add_box{
+		@extend.box;
+		background-color: #f9f9f9;
+
+		a{	
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		svg{
+			display: block;
+			margin: auto;
+			margin-top: 25%;	
+			transition: .3s;
+			transition-timing-function: ease-out;
+		}
+
+		.add_box__title{
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			color: #bababa;
+			top: 60%;
+			
+			h6{
+				text-transform: uppercase;
+			}
+		}
+
+		a:hover svg{
+			margin-top: 23.5%;
+		}
+	}
+}
