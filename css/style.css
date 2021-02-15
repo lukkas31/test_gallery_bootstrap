@@ -134,8 +134,8 @@ body {
   display: block;
   margin: auto;
   margin-top: 25%;
-  -webkit-transition: .35s;
-  transition: .35s;
+  -webkit-transition: .3s;
+  transition: .3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
 }
